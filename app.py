@@ -22,7 +22,7 @@ st.markdown("Automated product extraction and real-time market analysis.")
 # Sidebar Controls
 with st.sidebar:
     st.header("⚙️ Engine Controls")
-    if st.button("🚀 Run Extraction Pipeline", type="primary", use_container_width=True):
+    if st.button("Run Extraction Pipeline", type="primary", use_container_width=True):
         with st.spinner("Executing extraction sequences..."):
             df_new = scrape_ecommerce(max_pages=3)
             if process_and_save(df_new):
